@@ -1,17 +1,22 @@
 import { useNavigate } from 'react-router';
 import { useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
 
 import { HiLockClosed } from 'react-icons/hi'
-import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '@hookform/error-message';
 
 import { loginUser } from '../api/Users';
 import { setRefreshToken } from '../storage/Cookie';
 import { SET_TOKEN } from '../store/Auth';
 
+import tw from 'twin.macro';
+
+const Input = tw.input`
+  appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm
+`;
+
 
 function Login() {
-
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -55,9 +60,8 @@ function Login() {
                                 <label htmlFor="UserID" className="sr-only">
                                     User ID
                                 </label>
-                                <input
+                                <Input
                                     {...register("userid", {required: "Please Enter Your ID"})}
-                                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                     type="text"
                                     placeholder="User ID"
                                 />
@@ -75,9 +79,8 @@ function Login() {
                                 <label htmlFor="password" className="sr-only">
                                     Password
                                 </label>
-                                <input
+                                <Input
                                     {...register("password", {required: "Please Enter Your Password"})}
-                                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                     type="text"
                                     placeholder="Password"
                                 />
