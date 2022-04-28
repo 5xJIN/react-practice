@@ -20,6 +20,7 @@
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
     "styled-components": "^5.3.5",
+    "twin.macro": "^2.8.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -49,6 +50,11 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.24"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
   }
 }
