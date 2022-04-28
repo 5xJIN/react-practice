@@ -18,11 +18,15 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/logout" element={<Logout />} />
             </Route>
-            <Route path="/user/login"
-                   element={<PublicRoute>
-                       <Login />
-                   </PublicRoute>}
-            />
+
+            <Route element={<PublicRoute />}>
+                <Route path="/user/login" element={<Login />} />
+            </Route>
+            {/*<Route path="/user/login"*/}
+            {/*       element={<PublicRoute>*/}
+            {/*                   <Login />*/}
+            {/*               </PublicRoute>}*/}
+            {/*/>*/}
         </Routes>
 
       </Router>
