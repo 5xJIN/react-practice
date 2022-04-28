@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 //
 import { CheckToken } from '../utils/ToeknUtil';
+import LoadingModal from '../component/LoadingModal';
 
 
 export default function PublicRoute({ children }) {
@@ -14,6 +15,8 @@ export default function PublicRoute({ children }) {
         return (
             <Navigate to="/" state={{from: location}}/>
         )
+    } else if (isAuth==='Loading') {
+        return <LoadingModal />
     }
 
     return children
