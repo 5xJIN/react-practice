@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCookieToken, removeCookieToken } from '../storage/Cookie';
 import { requestToken } from '../api/Users';
-import { DELETE_TOKEN, SET_TOKEN } from '../Store/Auth';
+import { DELETE_TOKEN, SET_TOKEN } from '../store/Auth';
 
 
 export function CheckToken(key) {
