@@ -3,7 +3,7 @@ import { Outlet, Navigate } from 'react-router';
 import { useLocation } from 'react-router-dom';
 
 //
-import { CheckToken } from '../utils/ToeknUtil';
+import { CheckToken } from '../auth/CheckTokenl';
 import LoadingModal from '../component/LoadingModal';
 
 

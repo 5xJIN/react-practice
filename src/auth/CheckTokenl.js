@@ -36,7 +36,6 @@ export function CheckToken(key) {
         };
         checkAuthToken();
     }, [refreshToken, dispatch, key]);
-    //refreshToken, authenticated, dispatch
 
     return {
         isAuth
